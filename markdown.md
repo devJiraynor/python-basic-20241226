@@ -120,5 +120,31 @@ pip install matplotlib
 김철수|20|서울
   
 # 이미지
+'\!\[설명](이미지경로)'로 이미지 표현 가능  
+크기 조절을 하고자 할땐 HTML 태그를 사용해야함  
+  
+![강아지](https://cdn.imweb.me/upload/S201910012ff964777e0e3/62f9a36ea3cea.jpg)
+<img src='https://cdn.imweb.me/upload/S201910012ff964777e0e3/62f9a36ea3cea.jpg' height='200px' width='200px'>
 
 # 링크
+## 외부링크
+'\[링크이름](주소)'로 링크 지정 가능  
+  
+[구글](https://google.com)  
+https://google.com
+
+## 내부링크
+'\[링크이름](헤더)'로 내부 링크 지정 가능  
+  
+[1 - 줄바꿈](#줄바꿈)  
+  
+## 이미지에 링크 적용
+'\[이미지형태](주소)'로 이미지에 링크를 적용 가능  
+
+[![강아지](https://cdn.imweb.me/upload/S201910012ff964777e0e3/62f9a36ea3cea.jpg)](#줄바꿈) 
+
+# HTML 혼용
+마크다운에 HTML 사용 가능  
+  
+# 제목을 입력했습니다.
+<h1 style="background-color: black; color: white;">제목을 입력했습니다.</h1>
