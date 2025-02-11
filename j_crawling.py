@@ -132,7 +132,7 @@ pw_input.send_keys(Keys.RETURN)
 # login_button = driver.find_element(By.ID, 'log.login')
 # login_button.click()
 
-sleep(10)
+sleep(1)
 
 ##################################################
 
@@ -167,7 +167,9 @@ sleep(10)
 
 ##################################################
 
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
+sleep(10)
 
 ##################################################
 
