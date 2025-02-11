@@ -51,7 +51,11 @@
 
 ##################################################
 
+from selenium import webdriver
+from time import sleep
 
+driver = webdriver.Chrome()
+driver.get('https://naver.com')
 
 ##################################################
 
@@ -69,7 +73,14 @@
 
 ##################################################
 
+from selenium.webdriver.common.by import By
 
+# element = driver.find_element(By.CSS_SELECTOR, '#account > div > p')
+# elements = driver.find_elements(By.TAG_NAME, 'p')
+# for element in elements:
+#   print(element.text)
+
+login_button = driver.find_element(By.CSS_SELECTOR, '#account > div > a')
 
 ##################################################
 
@@ -94,7 +105,34 @@
 
 ##################################################
 
+login_button.click()
 
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver import ActionChains
+import pyperclip
+
+id_input = driver.find_element(By.ID, 'id')
+pyperclip.copy("jiraynor")
+id_input.click()
+action = ActionChains(driver)
+action.key_down(Keys.CONTROL).send_keys('v').key_up(Keys.CONTROL).perform()
+
+sleep(1)
+
+pw_input = driver.find_element(By.ID, 'pw')
+pyperclip.copy("P!ssw0rd")
+pw_input.click()
+action = ActionChains(driver)
+action.key_down(Keys.CONTROL).send_keys('v').key_up(Keys.CONTROL).perform()
+
+sleep(1)
+
+pw_input.send_keys(Keys.RETURN)
+
+# login_button = driver.find_element(By.ID, 'log.login')
+# login_button.click()
+
+sleep(10)
 
 ##################################################
 
